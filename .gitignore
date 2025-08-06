@@ -1,0 +1,39 @@
+# Папка виртуального окружения
+venv/
+__pycache__/
+
+# Файлы базы данных SQLite
+/instance/notes.db
+*.db
+*.sqlite
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Файлы IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Логи и временные файлы
+*.log
+*.pot
+*.pid
+
+# Файлы сборки
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Тестовые данные
+tests/.pytest_cache/
+
+# Environment files
+.env
+.venv
+env/
+env.bak/
