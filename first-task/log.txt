@@ -1,0 +1,5 @@
+[2023-10-05 08:15:00] INFO: Server started
+[2023-10-05 08:15:23] WARNING: Disk space 90% full
+[2023-10-05 08:16:10] ERROR: User authentication failed
+[2023-10-05 08:16:45] INFO: New connection from 192.168.1.10
+[2023-10-05 08:17:30] ERROR: Database timeout
