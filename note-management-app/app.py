@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from config import Config
 from models import db, Note, User, Tag
+import os
 
 app = Flask(__name__)
 CORS(app)
@@ -9,7 +10,16 @@ app.config.from_object(Config)
 db.init_app(app)
 
 with app.app_context():
-    db.create_all()
+    with app.app_context():
+        db_dir = os.path.join(os.path.dirname(__file__), 'instance')
+        if not os.path.exists(db_dir):
+            os.makedirs(db_dir)
+        
+        try:
+            db.create_all()
+            print("Таблицы созданы/проверены")
+        except Exception as e:
+            print(f"Ошибка при создании таблиц: {e}")
 
 
 @app.route("/api/notes", methods=["GET"])
